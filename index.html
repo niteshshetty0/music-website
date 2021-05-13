@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>music website</title>
+        <link rel="stylesheet" href="style.css">
+        
+        
+    </head>
+    <body>
+        
+        <div class="container">
+            <img src="circle-cropped.png" style="float: left; padding-right: 5px;" id="logo"><br><h2 style="float: left; padding-top: 10px;">NITESH EDITZ</h2>
+            
+            <div class="navbar">
+               
+                
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Videos</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="left-col">
+                <h1>The<br> Real<br> Sound</h1>
+            </div>
+                <div class="right-col">
+                    <p>Click Here To Listen</p>
+                    <img src="play.png" id="icon">
+                
+            </div>
+
+        </div>
+        <audio id="mysong">
+            <source src="1.mp3" type="audio/mp3">
+        </audio>
+        <script>
+            var mysong =document.getElementById("mysong");
+            var icon =document.getElementById("icon");
+            icon.onclick = function(){
+                if(mysong.paused){
+                    mysong.play();
+                    icon.src="pause.png";
+                }else{
+                    mysong.pause();
+                    icon.src="play.png";
+                }
+            }
+
+        </script>
+        
+    </body>
+</html>
